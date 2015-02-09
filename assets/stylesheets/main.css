@@ -64,6 +64,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 3, ../sass/main.scss */
-body {
-  color: #333;
+.grid_wrapper {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+/* line 8, ../sass/main.scss */
+.span_1_of_3 {
+  background: red;
 }
