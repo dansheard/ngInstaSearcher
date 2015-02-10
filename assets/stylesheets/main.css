@@ -64,12 +64,77 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 3, ../sass/main.scss */
-.grid_wrapper {
+html {
+  font-size: 62.5%;
+}
+
+/* line 7, ../sass/main.scss */
+body {
+  padding: 2em;
+  font-size: 1.4rem;
+  font-family: arial, verdana, sans-serif;
+}
+
+/* line 13, ../sass/main.scss */
+.grid-wrapper {
   width: 1080px;
   margin: 0 auto;
 }
 
-/* line 8, ../sass/main.scss */
-.span_1_of_3 {
-  background: red;
+/* line 18, ../sass/main.scss */
+.main-header {
+  background-image: url("../img/ng-instagram.png");
+  background-repeat: no-repeat;
+  width: 334px;
+  min-height: 117px;
+  text-indent: -9999px;
+  margin: 0 auto 50px auto;
+}
+
+/* line 27, ../sass/main.scss */
+.form-wrapper {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 505px;
+}
+
+/* line 33, ../sass/main.scss */
+.search-input {
+  padding: 5px;
+  width: 400px;
+  height: 30px;
+  display: block;
+  font-size: 1.8rem;
+  float: left;
+  margin-right: 10px;
+}
+
+/* line 43, ../sass/main.scss */
+.button {
+  border: 1px solid #ededed;
+  background: none;
+  cursor: pointer;
+  height: 44px;
+  padding: 5px;
+  width: 80px;
+  font-size: 1.4rem;
+  float: left;
+}
+
+/* line 54, ../sass/main.scss */
+.search-feedback {
+  font-size: 1.8rem;
+  margin: 0 auto;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* line 61, ../sass/main.scss */
+.button:hover {
+  background-color: #d1d1d1;
+}
+
+/* line 65, ../sass/main.scss */
+.img {
+  border: 1px solid #ededed;
 }
