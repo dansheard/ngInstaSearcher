@@ -30,6 +30,12 @@
 }
 
 .col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+.list-wrapper li:nth-child(4),
+.list-wrapper li:nth-child(7),
+.list-wrapper li:nth-child(10),
+.list-wrapper li:nth-child(13),
+.list-wrapper li:nth-child(16),
+.list-wrapper li:nth-child(19) { margin-left:0; };
 
 
 /*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */

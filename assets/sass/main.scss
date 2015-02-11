@@ -16,28 +16,42 @@ body {
 }
 
 .main-header {
-	background-image: url('../img/ng-instagram.png');
+	@media only screen and (min-width: $medium-screen) {
+		width: 334px;
+		margin: 0 auto 50px auto;
+		background-image: url('../img/ng-instagram.png');
+	}
+
+	background-image: url('../img/ng-instagram-sm.png');
 	background-repeat: no-repeat;
-	width: 334px;
 	min-height: 117px;
 	text-indent: -9999px;
-	margin: 0 auto 50px auto;
+	margin-left: -17px;
 }
 
 .form-wrapper {
 	margin: 0 auto;
 	overflow: hidden;
-	width: 505px;
+	width: 535px;
+}
+
+.search-wrapper {
+	margin: 20px 0;
 }
 
 .search-input {
-	padding: 5px;
-	width: 400px;
-	height: 30px;
-	display: block;
-	font-size: 1.8rem;
+	@media only screen and (min-width: $medium-screen) {
+		display: block;
+		width: 400px;
+		margin: 0 10px 10px 0;
+		font-size: 1.8rem;
+	}
+
 	float: left;
-	margin-right: 10px;
+	padding: 5px;
+	height: 30px;
+	font-size: 1.2rem;
+	min-width: 220px;
 }
 
 .button {
@@ -49,6 +63,10 @@ body {
 	width: 80px;
 	font-size: 1.4rem;
 	float: left;
+	@media only screen and (max-width: $medium-screen) {
+		clear: both;
+		margin: 10px 0 0 30px;
+	}
 }
 
 .search-feedback {
@@ -64,4 +82,25 @@ body {
 
 .img {
 	border: 1px solid $border-color;
+	width: 100%;
+
+	@media only screen and (max-width: $medium-screen) {
+		margin-bottom: 10px;
+	}
+}
+
+.hash {
+	display: block;
+	float: left;
+	font-size: 4.4rem;
+	margin-right: 5px;
+}
+
+.error-block {
+	color: $error-colour;
+	background-color: $error-bg;
+	border: 1px solid $error-border;
+	padding: 10px;
+	display: block;
+	clear: both;
 }

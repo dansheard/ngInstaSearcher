@@ -1,8 +1,15 @@
 // Variables
 $base-font-size: 62.5%;
-$primary-font-color: #333;
+
+// Colours
+$primary-font-colour: #333;
 $border-color: #ededed;
 $button-hover: #d1d1d1;
+$error-colour: #a94442;
+$error-bg: #f2dede;
+$error-border: #ebccd1;
+
+$medium-screen: 580px;
 
 @import "compass/reset";
 @import "compass/utilities";
