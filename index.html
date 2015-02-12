@@ -38,6 +38,7 @@
           <h2 ng-if="main.imageCount > 0" class="search-feedback">We found {{ main.imageCount }} images matching the #hashtag {{ main.cachedTag }}</h2>
           <h2 ng-if="main.imageCount === 0 && !main.errorMessage" class="search-feedback">Sorry we couldn't find any images</h2>
           <h2 ng-if="main.errorMessage" class="search-feedback">Sorry something went wrong please try again :(</h2>
+          <h2 ng-if="main.bannedWord" class="search-feedback">Sorry you searched for a banned word, please search for something else :(</h2>
         </div>
       </div>
 

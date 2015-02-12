@@ -9,6 +9,7 @@ angular.module('ngInstaSearcher', ['ngMessages', 'ngAnimate'])
     vm.imageCount = false;
     vm.errorMessage = false;
     vm.cachedTag = false;
+    vm.bannedWord = false;
 
     vm.postForm = function() {
 
@@ -25,17 +26,28 @@ angular.module('ngInstaSearcher', ['ngMessages', 'ngAnimate'])
             method: 'JSONP',
             url: url,
             params: request
-        }).
+        })
 
-        then(function(result) {
-          vm.receivedImages = result.data.data;
-          vm.imageCount = vm.receivedImages.length;
-          vm.searchInProgress = false;
-          vm.cachedTag = vm.searchInput;
-          vm.searchInput = '';
-        }).
-
-        catch(function(result) {
+        .then(function(result) {
+          
+          if(result.data.meta.code == '400') {
+            vm.bannedWord = true;
+            vm.searchInProgress = false;
+            vm.reset();
+          } else {
+            vm.bannedWord = false;
+            vm.receivedImages = result.data.data;
+            vm.imageCount = vm.receivedImages.length;
+            vm.searchInProgress = false;
+            vm.cachedTag = vm.searchInput;
+            vm.searchInput = '';
+            vm.searchForm.$setPristine();
+            vm.submitted = false;
+          }
+        })
+        
+        .catch(function(result) {
+          console.log(result)
           vm.searchInProgress = false;
           vm.errorMessage = true;
           vm.imageCount = 0;
@@ -45,4 +57,9 @@ angular.module('ngInstaSearcher', ['ngMessages', 'ngAnimate'])
         vm.searchForm.submitted = true;
       }
     } 
+
+    vm.reset = function() {
+      vm.imageCount = false;
+      vm.receivedImages = false;
+    }
   });

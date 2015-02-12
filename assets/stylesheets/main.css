@@ -162,7 +162,7 @@ body {
 
 /* line 83, ../sass/main.scss */
 .img {
-  border: 1px solid #ededed;
+  border: 5px solid transparent;
   width: 100%;
 }
 @media only screen and (max-width: 580px) {
@@ -171,8 +171,12 @@ body {
     margin-bottom: 10px;
   }
 }
+/* line 91, ../sass/main.scss */
+.img:hover {
+  border: 5px solid #ededed;
+}
 
-/* line 92, ../sass/main.scss */
+/* line 96, ../sass/main.scss */
 .hash {
   display: block;
   float: left;
@@ -180,7 +184,7 @@ body {
   margin-right: 5px;
 }
 
-/* line 99, ../sass/main.scss */
+/* line 103, ../sass/main.scss */
 .error-block {
   color: #a94442;
   background-color: #f2dede;

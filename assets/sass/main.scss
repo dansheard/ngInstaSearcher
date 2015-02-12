@@ -81,11 +81,15 @@ body {
 }
 
 .img {
-	border: 1px solid $border-color;
+	border: 5px solid transparent;
 	width: 100%;
 
 	@media only screen and (max-width: $medium-screen) {
 		margin-bottom: 10px;
+	}
+
+	&:hover {
+		border: 5px solid $border-color;
 	}
 }
 
